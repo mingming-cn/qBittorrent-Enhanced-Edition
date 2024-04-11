@@ -18,7 +18,7 @@ std::unique_ptr<peer_filter> create_peer_filter(const QString& filename)
   QString filter_file = qbt_data_dir.toString();
   // do not create plugin if filter file doesn't exists
   if (!QFile::exists(filter_file)) {
-    LogMsg(u"'%1' doesn't exist. The corresponding filter is disabled."_s.arg(filename), Log::NORMAL);
+    LogMsg(u"'%1' doesn't exist. The corresponding filter is disabled."_s.arg(filter_file), Log::NORMAL);
 
     return nullptr;
   }
